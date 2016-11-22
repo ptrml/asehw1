@@ -7,8 +7,13 @@ package com.ptrml.Services;
 // class DataService : public BasicService
 // ...
 
-public class DataService {
+public class DataService extends BasicService{
 
+    private int size;
+    private int unit;
+    private double price_per_unit;
+    private int dlspeed;
+    private int ulspeed;
 
     public DataService(
             double _service_price, // osnovna pretplata za servisot
@@ -19,6 +24,11 @@ public class DataService {
            int _ulspeed // max upload speed
     )
     {
-
+        this.service_price = _service_price;
+        this.size = _size;
+        this.unit = _unit;
+        this.price_per_unit = _price_per_unit;
+        this.dlspeed = _dlspeed;
+        this.ulspeed = _ulspeed;
     }
 }

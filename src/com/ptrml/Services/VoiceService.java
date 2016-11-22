@@ -7,6 +7,12 @@ package com.ptrml.Services;
 
 public class VoiceService extends BasicService{
 
+    private double free_mins;
+    private int unit;
+    private double price_per_min;
+    private double price_per_call;
+    private int free_sec_in_call;
+
     public VoiceService(
             double _service_price, // osnovna pretplata za servisot
             double _free, // kolku free minuti vrednost se dobiva za pretplatata
@@ -16,6 +22,12 @@ public class VoiceService extends BasicService{
             int _free_sec_in_call // sekundi razgovor vkluceni vo cenata na vospostavuvanje na povik
     )
     {
+        this.service_price = _service_price;
+        this.free_mins = _free;
+        this.unit = _unit;
+        this.price_per_min = _price_per_min;
+        this.price_per_call = _price_per_call;
+        this.free_sec_in_call = _free_sec_in_call;
 
     }
 }

@@ -7,8 +7,8 @@ package com.ptrml.Services;
 
 public class SmsService extends BasicService {
 
-    protected int msgs;
-    protected double price_per_msg;
+    private int msgs;
+    private double price_per_msg;
 
     public SmsService(
             double _service_price, // osnovna pretplata za servisot
@@ -16,6 +16,7 @@ public class SmsService extends BasicService {
             double _price_per_msg // cena na poraka
     )
     {
+        this.service_price = _service_price;
         this.msgs = _msgs;
         this.price_per_msg = _price_per_msg;
     }
