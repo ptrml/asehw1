@@ -1,12 +1,13 @@
 package com.ptrml.Services;
 
 /**
- * Created by Pepo123 on 11/20/2016.
+ * Created by ptrml on 11/20/2016.
  */
 
 
 public class VoiceService extends BasicService{
 
+    private static final String service_name = "Voice";
     private double free_mins;
     private int unit;
     private double price_per_min;
@@ -29,5 +30,10 @@ public class VoiceService extends BasicService{
         this.price_per_call = _price_per_call;
         this.free_sec_in_call = _free_sec_in_call;
 
+    }
+
+    @Override
+    public String getName() {
+        return service_name;
     }
 }

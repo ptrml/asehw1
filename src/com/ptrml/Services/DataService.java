@@ -1,14 +1,16 @@
 package com.ptrml.Services;
 
+import com.ptrml.Nameable;
+
+import javax.lang.model.element.Name;
+
 /**
- * Created by Pepo123 on 11/20/2016.
+ * Created by ptrml on 11/20/2016.
  */
 
-// class DataService : public BasicService
-// ...
+public class DataService extends BasicService {
 
-public class DataService extends BasicService{
-
+    private static final String service_name = "Data";
     private int size;
     private int unit;
     private double price_per_unit;
@@ -30,5 +32,10 @@ public class DataService extends BasicService{
         this.price_per_unit = _price_per_unit;
         this.dlspeed = _dlspeed;
         this.ulspeed = _ulspeed;
+    }
+
+    @Override
+    public String getName() {
+        return service_name;
     }
 }

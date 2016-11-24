@@ -1,12 +1,22 @@
 package com.ptrml.Services;
 
+import com.ptrml.Nameable;
+import com.ptrml.Prototype;
+
 /**
- * Created by Pepo123 on 11/20/2016.
+ * Created by ptrml on 11/20/2016.
  */
-public class BasicService {
+public abstract class BasicService implements Nameable,Prototype<BasicService> {
+
+    protected double service_price;
+
     public double getService_price() {
         return service_price;
     }
+    public abstract String getName();
 
-    protected double service_price;
+    public BasicService clone() throws CloneNotSupportedException
+    {
+        return (BasicService) super.clone();
+    }
 }

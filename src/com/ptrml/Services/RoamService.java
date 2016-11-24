@@ -1,8 +1,16 @@
 package com.ptrml.Services;
 
+import com.ptrml.Nameable;
+
 /**
- * Created by Pepo123 on 11/20/2016.
+ * Created by ptrml on 11/20/2016.
  */
 public class RoamService extends BasicService {
 
+    private static final String service_name = "Roam";
+
+    @Override
+    public String getName() {
+        return service_name;
+    }
 }
