@@ -1,9 +1,5 @@
 package com.ptrml.Services;
 
-import com.ptrml.Nameable;
-
-import javax.lang.model.element.Name;
-
 /**
  * Created by ptrml on 11/20/2016.
  */

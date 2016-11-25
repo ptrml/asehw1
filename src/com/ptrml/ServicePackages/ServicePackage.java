@@ -1,5 +1,6 @@
 package com.ptrml.ServicePackages;
 
+import com.ptrml.Nameable;
 import com.ptrml.Prototype;
 import com.ptrml.Services.BasicService;
 
@@ -9,30 +10,44 @@ import java.util.List;
 /**
  * Created by ptrml on 11/20/2016.
  */
-public class ServicePackage implements Prototype<ServicePackage> {
+public class ServicePackage implements Prototype<ServicePackage>,Nameable {
     protected String name;
     protected List<BasicService> serviceList;
 
-
-
-    public List<BasicService> getServiceList() {
-        return serviceList;
-    }
-
-    public void setServiceList(List<BasicService> serviceList) {
-        this.serviceList = serviceList;
-    }
-
+    /**
+     * Constructor
+     * @param _sname imeto na paketot
+     */
     public ServicePackage(String _sname) {
 
         this.name = _sname;
         this.serviceList = new ArrayList<>();
     }
 
+    /**
+     * @return lista na servisi vo paketot
+     */
+    public List<BasicService> getServiceList() {
+        return serviceList;
+    }
+
+    /**
+     * @param serviceList lista na servisi sodrzani vo paketot
+     */
+    public void setServiceList(List<BasicService> serviceList) {
+        this.serviceList = serviceList;
+    }
+
+    /**
+     * @param _service Dodavawe na servis vo postoeckata lista servisi na paketot
+     */
     public void AddService(BasicService _service) {
         serviceList.add(_service);
     }
 
+    /**
+     * Ispecatuva spisok na sodrzanite servisi vo paketot
+     */
     public void ListServices() {
         int i = 0;
         for (BasicService service:serviceList)

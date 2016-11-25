@@ -1,7 +1,5 @@
 package com.ptrml.Services;
 
-import com.ptrml.Nameable;
-
 /**
  * Created by ptrml on 11/20/2016.
  */

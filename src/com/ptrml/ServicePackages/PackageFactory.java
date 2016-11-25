@@ -10,19 +10,24 @@ import java.util.List;
  *
  */
 public class PackageFactory {
-    protected static List<ServicePackage> prototypesList;
+    protected static List<ServicePackage> prototypesList = new ArrayList<>();
 
     /**
+     * Dodava paket prototip vo listata so prototipi
      * @param _sp asd
      */
     public static void AddPrototype(ServicePackage _sp)
     {
-        checkServicePackageList();
         PackageFactory.prototypesList.add(_sp);
     }
 
+    /**
+     * @param _input Imeto na paketot koj treba da se klonira
+     * @return ServicePackage clone
+     * @throws CloneNotSupportedException ne e poddrzano kloiniranje na objektot. zadolzitelno za clonable
+     * @throws NoSuchObjectException Listata ne sodrzi prototip so vnesenoto ime
+     */
     public static ServicePackage findAndClone(String _input) throws CloneNotSupportedException, NoSuchObjectException {
-        checkServicePackageList();
         for(ServicePackage sp : PackageFactory.prototypesList)
         {
             if(sp != null && sp.getName().equals(_input))
@@ -34,19 +39,4 @@ public class PackageFactory {
         throw new NoSuchObjectException(_input);
     }
 
-    /**
-     * Inicijalizacija na listata so prototipi
-     */
-    protected static void initServicePackageList() {
-        PackageFactory.prototypesList = new ArrayList<>();
-    }
-
-    /**
-     * Bidejki metodite se staticki zadolzitelno e da se proveri dali listata e inicijalizirana.
-     * Ja inicijalizira listata pri prvoto koristenje
-     */
-    protected static void checkServicePackageList() {
-        if(PackageFactory.prototypesList == null)
-            initServicePackageList();
-    }
 }
