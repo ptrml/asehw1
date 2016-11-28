@@ -1,7 +1,6 @@
 package com.ptrml;
 
 /**
- * Created by ptrml on 11/23/2016.
  * Prototype interface
  * Ovozmozuva pravenje kopii na objekti
  */

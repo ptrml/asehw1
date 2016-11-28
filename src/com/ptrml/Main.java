@@ -33,6 +33,7 @@ public class Main {
         PackageFactory.AddPrototype(sp1);
         PackageFactory.AddPrototype(sp2);
         PackageFactory.AddPrototype(sp3);
+
 // kreiranje na kopii na paketite po potreba so koloniranje
         ServicePackage psp1 = null;
         try {
@@ -52,7 +53,7 @@ public class Main {
         }  catch (Exception e) {
             e.printStackTrace();
         }
-        sp1.AddService(new SmsService(23.0,50,4.9));
+
         // rabota so paketite, na pr.
         if (psp1 != null) {
             System.out.printf( " List of services & subscription prices in package: %s\n",psp1.getName());

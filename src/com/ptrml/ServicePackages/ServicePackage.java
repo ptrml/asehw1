@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by ptrml on 11/20/2016.
+ * Klasa Paket so servisi. Sodrzi lista so servisi
  */
 public class ServicePackage implements Prototype<ServicePackage>,Nameable {
     protected String name;

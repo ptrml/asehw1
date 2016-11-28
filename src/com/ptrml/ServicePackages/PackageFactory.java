@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by ptrml on 11/20/2016.
  * Prototype manager klasa
  *
  */
